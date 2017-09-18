@@ -1,0 +1,3 @@
+[submodule "MIAT_STM32"]
+	path = MIAT_STM32
+	url = https://github.com/wuyangtech/MIAT_STM32
