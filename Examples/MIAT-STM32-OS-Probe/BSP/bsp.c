@@ -916,7 +916,7 @@ void  BSP_NOR_Init (void)
     nor_init.FSMC_WriteOperation        = FSMC_WriteOperation_Enable;
     nor_init.FSMC_WaitSignal            = FSMC_WaitSignal_Disable;
     nor_init.FSMC_ExtendedMode          = FSMC_ExtendedMode_Disable;
-//    nor_init.FSMC_AsyncWait             = FSMC_AsyncWait_Disable;
+    nor_init.FSMC_AsyncWait             = FSMC_AsyncWait_Disable;
     nor_init.FSMC_WriteBurst            = FSMC_WriteBurst_Disable;
     nor_init.FSMC_ReadWriteTimingStruct = &p;
     nor_init.FSMC_WriteTimingStruct     = &p;

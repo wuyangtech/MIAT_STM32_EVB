@@ -56,7 +56,7 @@
 
 /************************************* DMA ************************************/
 #define _DMA
-//#define _DMA1_Channel1
+#define _DMA1_Channel1
 //#define _DMA1_Channel2
 //#define _DMA1_Channel3
 //#define _DMA1_Channel4

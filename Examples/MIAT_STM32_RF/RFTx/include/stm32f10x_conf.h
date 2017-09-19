@@ -1,8 +1,8 @@
 /******************** (C) COPYRIGHT 2008 STMicroelectronics ********************
 * File Name          : stm32f10x_conf.h
 * Author             : MCD Application Team
-* Version            : V1.0.1
-* Date               : 09/26/2008
+* Version            : V2.0.3
+* Date               : 09/22/2008
 * Description        : Library configuration file.
 ********************************************************************************
 * THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
@@ -35,7 +35,7 @@
 #define _ADC3
 
 /************************************* BKP ************************************/
-#define _BKP
+#define _BKP 
 
 /************************************* CAN ************************************/
 #define _CAN
@@ -146,23 +146,27 @@
    used in your application */
 #define HSE_Value    ((u32)8000000) /* Value of the External oscillator in Hz*/
 
+/* In the following line adjust the External High Speed oscillator (HSE) Startup 
+   Timeout value */
+#define HSEStartUp_TimeOut    ((u16)0x0500) /* Time out for HSE start up */
+
 /* Exported macro ------------------------------------------------------------*/
 #ifdef  DEBUG
 /*******************************************************************************
 * Macro Name     : assert_param
 * Description    : The assert_param macro is used for function's parameters check.
-*                  It is used only if the library is compiled in DEBUG mode.
+*                  It is used only if the library is compiled in DEBUG mode. 
 * Input          : - expr: If expr is false, it calls assert_failed function
 *                    which reports the name of the source file and the source
-*                    line number of the call that failed.
+*                    line number of the call that failed. 
 *                    If expr is true, it returns no value.
 * Return         : None
-*******************************************************************************/
-#define assert_param(expr) ((expr) ? (void)0 : assert_failed((u8 *)__FILE__, __LINE__))
+*******************************************************************************/ 
+  #define assert_param(expr) ((expr) ? (void)0 : assert_failed((u8 *)__FILE__, __LINE__))
 /* Exported functions ------------------------------------------------------- */
-void assert_failed(u8* file, u32 line);
+  void assert_failed(u8* file, u32 line);
 #else
-#define assert_param(expr) ((void)0)
+  #define assert_param(expr) ((void)0)
 #endif /* DEBUG */
 
 #endif /* __STM32F10x_CONF_H */
