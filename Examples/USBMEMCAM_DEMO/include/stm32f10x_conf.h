@@ -1,16 +1,18 @@
 /******************** (C) COPYRIGHT 2008 STMicroelectronics ********************
 * File Name          : stm32f10x_conf.h
 * Author             : MCD Application Team
-* Version            : V1.0.1
-* Date               : 09/26/2008
+* Version            : V1.1
+* Date               : 05/30/2008
 * Description        : Library configuration file.
 ********************************************************************************
 * THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
 * WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE TIME.
 * AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY DIRECT,
 * INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING FROM THE
-* CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE CODING
+* CONTENT OF SUCH SOFTWARE AND/OR THE USE MADE BY CUSTOMERS OF THE CODING
 * INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+* FOR MORE INFORMATION PLEASE CAREFULLY READ THE LICENSE AGREEMENT FILE LOCATED
+* IN THE ROOT DIRECTORY OF THIS FIRMWARE PACKAGE.
 *******************************************************************************/
 
 /* Define to prevent recursive inclusion -------------------------------------*/
@@ -31,38 +33,41 @@
 /************************************* ADC ************************************/
 #define _ADC
 #define _ADC1
-#define _ADC2
-#define _ADC3
+//#define _ADC2
+//#define _ADC3
 
 /************************************* BKP ************************************/
 #define _BKP
 
 /************************************* CAN ************************************/
-#define _CAN
+//#define _CAN
 
 /************************************* CRC ************************************/
-#define _CRC
+//#define _CRC
+
+/************************************* CRC ************************************/
+//#define _CRC
 
 /************************************* DAC ************************************/
-#define _DAC
+//#define _DAC
 
 /************************************* DBGMCU *********************************/
-#define _DBGMCU
+//#define _DBGMCU
 
 /************************************* DMA ************************************/
 #define _DMA
 #define _DMA1_Channel1
-#define _DMA1_Channel2
-#define _DMA1_Channel3
-#define _DMA1_Channel4
-#define _DMA1_Channel5
-#define _DMA1_Channel6
-#define _DMA1_Channel7
-#define _DMA2_Channel1
-#define _DMA2_Channel2
-#define _DMA2_Channel3
+//#define _DMA1_Channel2
+//#define _DMA1_Channel3
+//#define _DMA1_Channel4
+//#define _DMA1_Channel5
+//#define _DMA1_Channel6
+//#define _DMA1_Channel7
+//#define _DMA2_Channel1
+//#define _DMA2_Channel2
+//#define _DMA2_Channel3
 #define _DMA2_Channel4
-#define _DMA2_Channel5
+//#define _DMA2_Channel5
 
 /************************************* EXTI ***********************************/
 #define _EXTI
@@ -91,7 +96,7 @@
 /************************************* I2C ************************************/
 #define _I2C
 #define _I2C1
-#define _I2C2
+//#define _I2C2
 
 /************************************* IWDG ***********************************/
 #define _IWDG
@@ -113,9 +118,9 @@
 
 /************************************* SPI ************************************/
 #define _SPI
-#define _SPI1
+//#define _SPI1
 #define _SPI2
-#define _SPI3
+//#define _SPI3
 
 /************************************* SysTick ********************************/
 #define _SysTick
@@ -140,7 +145,7 @@
 #define _UART5
 
 /************************************* WWDG ***********************************/
-#define _WWDG
+//#define _WWDG
 
 /* In the following line adjust the value of External High Speed oscillator (HSE)
    used in your application */
@@ -158,11 +163,11 @@
 *                    If expr is true, it returns no value.
 * Return         : None
 *******************************************************************************/
-#define assert_param(expr) ((expr) ? (void)0 : assert_failed((u8 *)__FILE__, __LINE__))
+  #define assert_param(expr) ((expr) ? (void)0 : assert_failed((u8 *)__FILE__, __LINE__))
 /* Exported functions ------------------------------------------------------- */
-void assert_failed(u8* file, u32 line);
+  void assert_failed(u8* file, u32 line);
 #else
-#define assert_param(expr) ((void)0)
+  #define assert_param(expr) ((void)0)
 #endif /* DEBUG */
 
 #endif /* __STM32F10x_CONF_H */
